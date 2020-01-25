@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Ruler control very similar to one which used in iOS Photos app.
                        DESC
 
   s.homepage         = 'https://github.com/selivandex/RulerView'
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = '/Sources/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'RulerView' => ['RulerView/Assets/*.png']
