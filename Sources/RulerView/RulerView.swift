@@ -8,28 +8,27 @@
 
 import UIKit
 
-protocol RulerDelegate: class {
+public protocol RulerDelegate: class {
     func rulerValueChanged(_ ruler: RulerView, value: Float)
 }
 
-class RulerView: UIView {
-    weak var delegate: RulerDelegate?
-    
-    var markerTypes: [RulerRangeMarkerType] = [
+public class RulerView: UIView {
+    public weak var delegate: RulerDelegate?
+    public var markerTypes: [RulerRangeMarkerType] = [
         RulerRangeMarkerType(color: UIColor.white.withAlphaComponent(0.7), size: .init(width: 1, height: 10), scale: 0.2),
         RulerRangeMarkerType(color: .white, size: .init(width: 1, height: 10), scale: 1.0)
     ]
     
-    var range: RulerRange<Float> = .init(location: 3, length: 7)
+    public var range: RulerRange<Float> = .init(location: 3, length: 7)
     
-    let pointerView: UIView = {
+    private let pointerView: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = .white
         return v
     }()
     
-    lazy var scrollView: RulerScrollView = {
+    private lazy var scrollView: RulerScrollView = {
         let sv = RulerScrollView()
         sv.range = range
         sv.markerTypes = markerTypes
