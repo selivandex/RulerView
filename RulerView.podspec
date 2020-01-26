@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RulerView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Ruler control very similar to one which used in iOS Photos app'
 
 # This description is used to generate tags and improve search results.
