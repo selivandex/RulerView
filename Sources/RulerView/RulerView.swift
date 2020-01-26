@@ -71,7 +71,7 @@ public class RulerView: UIView {
         delegate?.rulerValueChanged(self, value: sender.currentValue)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         scrollView.scrollToCurrentValueOffset()
